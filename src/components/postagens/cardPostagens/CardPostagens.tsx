@@ -1,22 +1,21 @@
 import { Link } from 'react-router-dom'
 import Postagem from '../../../models/Postagem'
 
-interface CardPostagensProps {
+interface CardPostagens {
     post: Postagem
 }
 
-function CardPostagens({ post }: CardPostagensProps) {
+function CardPostagens({ post }: CardPostagens) {
     return (
         <div className='border-slate-900 border 
             flex flex-col rounded overflow-hidden justify-between'>
-
+                
             <div>
                 <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
-                    <img src={post.usuario?.foto} className='h-12 rounded-full' 
-                        alt="Imagem do Usuário" />
+                    <img src={post.usuario?.foto} className='h-12 rounded-full' alt="Imagem do Usuário" />
                     <h3 className='text-lg font-bold text-center uppercase'>{post.usuario?.nome}</h3>
                 </div>
-                <div className='p-4'>
+                <div className='p-4 '>
                     <h4 className='text-lg font-semibold uppercase'>{post.titulo}</h4>
                     <p>{post.texto}</p>
                     <p>Tema: {post.tema?.descricao}</p>
