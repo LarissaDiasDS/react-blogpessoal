@@ -19,6 +19,7 @@ function Home() {
                                 <ModalPostagem />
                             </div>
                         </div>
+                        
                     </div>
 
                     <div className="flex justify-center ">
